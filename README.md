@@ -1,5 +1,5 @@
 # Проект: Место
-* [Ссылка на GitHub Pages](/)
+* [Ссылка на GitHub Pages](https://timur3107.github.io/mesto/index.html)
 
 Это мой третий проект, на тему **<<Место>>**.
 
