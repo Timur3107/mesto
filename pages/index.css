@@ -20,10 +20,12 @@
 /* блок elements*/
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/element/element.css);
+@import url(../blocks/element/__delete/element__delete.css);
 @import url(../blocks/element/__image/element__image.css);
 @import url(../blocks/element/__maskGroup/element__maskGroup.css);
 @import url(../blocks/element/__title/element__title.css);
 @import url(../blocks/element/__likeButton/element__likeButton.css);
+@import url(../blocks/element/__likeButton/_active/element__likeButton_active.css);
 
 /* блок footer */
 @import url(../blocks/footer/footer.css);
@@ -39,3 +41,6 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__input-name/popup__input-name.css);
 @import url(../blocks/popup/__saveButton/popup__saveButton.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__container-picture/popup__container-picture.css);
+@import url(../blocks/popup/__title-picture/popup__title-picture.css);
