@@ -6,10 +6,10 @@
   background-image: url(../../../images/addLike.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: white;
+  background-color: transparent;
   border: none;
   margin-right: 15px;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.2s linear;
 }
 
 .element__likeButton:hover{
