@@ -1,4 +1,4 @@
-.element__likeButton{
+.element__like-button{
   padding: 0;
   width: 22px;
   height: 19px;
@@ -12,6 +12,6 @@
   transition: opacity 0.2s linear;
 }
 
-.element__likeButton:hover{
+.element__like-button:hover{
   opacity: 0.6;
 }

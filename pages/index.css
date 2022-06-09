@@ -14,18 +14,18 @@
 @import url(../blocks/profile/__container/profile__container.css);
 @import url(../blocks/profile/__name/profile__name.css);
 @import url(../blocks/profile/__about/profile__about.css);
-@import url(../blocks/profile/__editButton/profile__editButton.css);
-@import url(../blocks/profile/__addButton/profile__addButton.css);
+@import url(../blocks/profile/__edit-button/profile__edit-button.css);
+@import url(../blocks/profile/__add-button/profile__add-button.css);
 
 /* блок elements*/
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/element/element.css);
 @import url(../blocks/element/__delete/element__delete.css);
 @import url(../blocks/element/__image/element__image.css);
-@import url(../blocks/element/__maskGroup/element__maskGroup.css);
+@import url(../blocks/element/__mask-group/element__mask-group.css);
 @import url(../blocks/element/__title/element__title.css);
-@import url(../blocks/element/__likeButton/element__likeButton.css);
-@import url(../blocks/element/__likeButton/_active/element__likeButton_active.css);
+@import url(../blocks/element/__likeButton/element__like-button.css);
+@import url(../blocks/element/__likeButton/_active/element__like-button_active.css);
 
 /* блок footer */
 @import url(../blocks/footer/footer.css);
@@ -35,12 +35,13 @@
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
-@import url(../blocks/popup/__closeButton/popup__closeButton.css);
+@import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__input-name/popup__input-name.css);
-@import url(../blocks/popup/__saveButton/popup__saveButton.css);
+@import url(../blocks/popup/__save-button/popup__save-button.css);
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__container-picture/popup__container-picture.css);
 @import url(../blocks/popup/__title-picture/popup__title-picture.css);
+@import url(../blocks/popup/_picture/popup_picture.css);
