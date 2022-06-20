@@ -5,12 +5,12 @@ const popupViewPicture = document.querySelector(".popup_picture")
 const popupList = document.querySelectorAll(".popup")
 
 // формы
-const formElement = popupEditProfile.querySelector(".popup__form");
+const formElementProfile = popupEditProfile.querySelector(".popup__form");
 const formElementCard = popupAddCard.querySelector(".popup__form")
 
 // поля ввода
-const nameInput = formElement.querySelector(".popup__input-name");
-const jobInput = formElement.querySelector(".popup__input-job");
+const nameInput = formElementProfile.querySelector(".popup__input-name");
+const jobInput = formElementProfile.querySelector(".popup__input-job");
 const nameInputCard = formElementCard.querySelector(".popup__input-name");
 const linkInputCard = formElementCard.querySelector(".popup__input-link");
 
@@ -22,6 +22,9 @@ const profileAbout = profile.querySelector(".profile__about")
 // кнопки открытия попапов
 const buttonProfileEdit = profile.querySelector(".profile__edit-button")
 const buttonAddCard = document.querySelector(".profile__add-button")
+
+// кнопка sunmit попапа addCard
+const buttonSubmitCard = popupAddCard.querySelector(".popup__save-button")
 
 // карточки
 const cards = document.querySelector(".elements")
@@ -106,6 +109,11 @@ function savePopupEditProfile(evt) {
   closePopup(popupEditProfile)
 }
 
+function disablingButtonSubmitCard (){
+  buttonSubmitCard.disabled = true
+  buttonSubmitCard.classList.add("popup__save-button_inactive")
+}
+
 // отправка form (2)
 function savePopupAddCard(evt) {
   evt.preventDefault();
@@ -135,10 +143,11 @@ buttonProfileEdit.addEventListener("click", event => {
 // открытие попапа (2)
 buttonAddCard.addEventListener("click", event => {
   openPopup(popupAddCard)
+  disablingButtonSubmitCard()
 })
 
 // формы
-formElement.addEventListener("submit", savePopupEditProfile)
+formElementProfile.addEventListener("submit", savePopupEditProfile)
 formElementCard.addEventListener("submit", savePopupAddCard)
 
 // обработка массива
