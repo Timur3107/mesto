@@ -13,6 +13,7 @@
   border: none;
   height: 50px;
   transition: opacity 0.3s linear;
+  user-select: none;
 }
 
 .popup__save-button:hover{
