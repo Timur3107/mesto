@@ -1,0 +1,16 @@
+.popup__input-error{
+  position: absolute;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #FF0000;
+  padding: 5px 0 0 0;
+  top: 143px;
+}
+
+.popup__input-error:last-of-type{
+  top: 205px;
+  padding: 5px 0 0 0;
+}
