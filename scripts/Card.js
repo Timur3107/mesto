@@ -1,6 +1,5 @@
-import { viewImage } from "./index.js"
 export class Card {
-  constructor(data, templateElement) {
+  constructor(data, templateElement, viewImage) {
     this._name = data.name
     this._link = data.link
     this._templateElement = templateElement
@@ -15,11 +14,11 @@ export class Card {
 
   createCard() {
     this._card = this._templateElement.cloneNode(true)
-    const newCardTitle = this._card.querySelector(".element__title")
-    const newCardImage = this._card.querySelector(".element__image")
-    newCardTitle.textContent = this._name
-    newCardImage.alt = this._name
-    newCardImage.src = this._link
+    this._newCardTitle = this._card.querySelector(".element__title")
+    this._newCardImage = this._card.querySelector(".element__image")
+    this._newCardTitle.textContent = this._name
+    this._newCardImage.alt = this._name
+    this._newCardImage.src = this._link
     this._listenActions(this._card)
     return this._card
   }
@@ -32,13 +31,5 @@ export class Card {
   // удаление карточки
   _deleteCard(evt) {
     evt.target.closest(".element").remove();
-  }
-
-  // открытие попапа (3)
-  _viewImage(evt) {
-    imagePopup.alt = evt.target.alt
-    imagePopup.src = evt.target.src
-    titlePicturePopup.textContent = evt.target.alt
-    openPopup(popupViewPicture)
   }
 }
