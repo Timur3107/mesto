@@ -1,12 +1,31 @@
+import { initialCards } from "./initialCards.js"
+import { Card } from "./card.js"
+import { FormValidator } from "./FormValidator.js"
+
 // попапы
 const popupAddCard = document.querySelector(".popup_add-card")
 const popupEditProfile = document.querySelector(".popup")
 const popupViewPicture = document.querySelector(".popup_picture")
 const popupList = document.querySelectorAll(".popup")
 
+// настройки для класса FormValidator
+const settings = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__save-button',
+  inactiveButtonClass: 'popup__save-button_inactive',
+  inputErrorClass: 'popup__input_error',
+  errorClass: 'popup__input-error_active'
+};
+
 // формы
 const formElementProfile = popupEditProfile.querySelector(".popup__form");
 const formElementCard = popupAddCard.querySelector(".popup__form")
+
+const formValidateProfile = new FormValidator(settings, popupEditProfile)
+formValidateProfile.enableValidation()
+const formValidateCard = new FormValidator(settings, formElementCard)
+formValidateCard.enableValidation()
 
 // поля ввода
 const nameInput = formElementProfile.querySelector(".popup__input-name");
@@ -35,7 +54,7 @@ const titlePicturePopup = document.querySelector('.popup__title-picture')
 
 // функции
 // открытие попапа
-function openPopup(popup) {
+export function openPopup(popup) {
   popup.classList.add("popup_opened")
   document.addEventListener("keydown", closePopupEscape)
 }
@@ -55,50 +74,29 @@ function closePopupEscape(evt) {
 }
 
 // добавление слушателя на overlay и кнопку закрытия
-popupList.forEach(function (popup){
-  popup.addEventListener("click", function(evt){
-    if(evt.target === popup){
+popupList.forEach(function (popup) {
+  popup.addEventListener("click", function (evt) {
+    if (evt.target === popup) {
       closePopup(popup)
     }
   })
-  popup.querySelector(".popup__close-button").addEventListener("click", event =>{
+  popup.querySelector(".popup__close-button").addEventListener("click", event => {
     closePopup(popup)
   })
 })
 
-// listeners
-function listenActions(element) {
-  element.querySelector(".element__like-button").addEventListener("click", likeCard)
-  element.querySelector(".element__delete").addEventListener("click", deleteCard)
-  element.querySelector(".element__image").addEventListener("click", viewImage)
-}
-
 // обработка карточки
-function renderСard(newCard) {
-  // listenActions(newCard)
-  cards.prepend(newCard)
+function renderСard(card) {
+  const newCard = new Card(card, cardTemplate)
+  return newCard.createCard();
+  // cards.prepend(newCard)
 }
 
 // создание карточки
 function createCard(card) {
-  const newCard = cardTemplate.cloneNode(true)
-  const newCardTitle = newCard.querySelector(".element__title")
-  const newCardImage = newCard.querySelector(".element__image")
-  newCardTitle.textContent = card.name
-  newCardImage.alt = card.name
-  newCardImage.src = card.link
-  listenActions(newCard)
-  renderСard(newCard)
-}
-
-// лайк карточки
-function likeCard(evt) {
-  evt.target.classList.toggle('element__like-button_active')
-}
-
-// удаление карточки
-function deleteCard(evt) {
-  evt.target.closest(".element").remove();
+  const newCard = renderСard(card)
+  renderСard(card)
+  cards.prepend(newCard)
 }
 
 // отправка form (1)
@@ -109,7 +107,7 @@ function savePopupEditProfile(evt) {
   closePopup(popupEditProfile)
 }
 
-function disablingButtonSubmitCard (){
+function disablingButtonSubmitCard() {
   buttonSubmitCard.disabled = true
   buttonSubmitCard.classList.add("popup__save-button_inactive")
 }
@@ -117,20 +115,19 @@ function disablingButtonSubmitCard (){
 // отправка form (2)
 function savePopupAddCard(evt) {
   evt.preventDefault();
-  createCard({name: nameInputCard.value, link: linkInputCard.value})
+  createCard({ name: nameInputCard.value, link: linkInputCard.value })
   formElementCard.reset();
   closePopup(popupAddCard)
 }
 
 // открытие попапа (3)
-function viewImage(evt) {
+export function viewImage(evt) {
   imagePopup.alt = evt.target.alt
   imagePopup.src = evt.target.src
   titlePicturePopup.textContent = evt.target.alt
 
   openPopup(popupViewPicture)
 }
-
 
 // слушатели
 // открытие попапа (1)
