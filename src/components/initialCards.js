@@ -1,7 +1,7 @@
 export const initialCards = [
   {
     name: 'Эльбрус',
-    link: 'images/Elbrus.jpeg'
+    link: 'https://alpinizzm.ru/wp-content/uploads/2017/10/6c6e9e0205b2a8f116f1fe625ea5c63a-1024x682.jpg'
   },
   {
     name: 'Чегет',
@@ -9,15 +9,15 @@ export const initialCards = [
   },
   {
     name: 'ГЛЦ Абзаково',
-    link: 'images/abzakovo.jpg'
+    link: 'https://chelreglib.ru/media/files/kray/tourism/abzakovo2.jpg'
   },
   {
     name: 'ГЛЦ Озеро Банное',
-    link: 'images/bannoe.jpg'
+    link: 'https://static-cdn4.vigbo.tech/u104096/103275/blog/5825163/5309256/section/d09909a6dbbbbe0267d11291e4c71724.jpg'
   },
   {
     name: 'ГЛЦ Мраткино',
-    link: 'images/mratkino.jpg'
+    link: 'https://s10.stc.all.kpcdn.net/best/ufa/newyear2015/images/1e33bc33-1192-4926-8a38-4532968b9123___0.jpg'
   },
   {
     name: 'Зирган Тау',

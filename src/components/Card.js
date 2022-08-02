@@ -1,15 +1,15 @@
 export class Card {
-  constructor(data, templateElement, viewImage) {
+  constructor(data, templateElement, handleCardClick) {
     this._name = data.name
     this._link = data.link
     this._templateElement = templateElement
-    this._viewImage = viewImage
+    this._handleCardClick = handleCardClick
   }
 
   _listenActions(element) {
     element.querySelector(".element__like-button").addEventListener("click", this._likeCard)
     element.querySelector(".element__delete").addEventListener("click", this._deleteCard)
-    element.querySelector(".element__image").addEventListener("click", this._viewImage)
+    element.querySelector(".element__image").addEventListener("click", this._handleCardClick)
   }
 
   createCard() {
