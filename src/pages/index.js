@@ -1,5 +1,4 @@
 import "./../pages/index.css"
-import { initialCards } from "../components/initialCards.js"
 import { Card } from "../components/Card.js"
 import { FormValidator } from "../components/FormValidator.js"
 import Section from "../components/Section.js"
@@ -9,6 +8,7 @@ import UserInfo from "../components/UserInfo.js"
 import {
   popupEditProfile,
   settings,
+  initialCards,
   formElementCard,
   nameInput,
   jobInput,
@@ -24,22 +24,20 @@ const userInfo = new UserInfo({
 
 // попапы
 const popupAddCardNew = new PopupWithForm (".popup_add-card", {
-  callbackSubmitForm: (evt) => {
-    evt.preventDefault();
-    popupAddCardNew._getInputValues()
-    const cardElement = new Card(popupAddCardNew._dataInputs, cardTemplate, viewImage)
-    const newCard = cardElement.createCard()
-    initialCardsSection.addItem(newCard)
+  callbackSubmitForm: (data) => {
+    const dataNew = {
+      name: data.name,
+      link: data.link
+    }
+    initialCardsSection.addItem(createCard(dataNew))
     popupAddCardNew.close()
   }
 })
 popupAddCardNew.setEventListeners()
 
 const popupEditProfileNew = new PopupWithForm(".popup_edit-profile",{
-  callbackSubmitForm: (evt) =>{
-    evt.preventDefault();
-    const dataUser = popupEditProfileNew._getInputValues()
-    userInfo.setUserInfo(dataUser)
+  callbackSubmitForm: ({name, about}) =>{
+    userInfo.setUserInfo({name, about})
     popupEditProfileNew.close()
   }
 })
@@ -54,9 +52,15 @@ formValidateProfile.enableValidation()
 const formValidateCard = new FormValidator(settings, formElementCard)
 formValidateCard.enableValidation()
 
+function createCard(data){
+  const cardElement = new Card(data, cardTemplate, viewImage)
+  const newCard = cardElement.createCard()
+  return newCard
+}
+
 // открытие попапа viewImage
-function viewImage(evt) {
-  popupViewPictureNew.open(evt.target)
+function viewImage(image) {
+  popupViewPictureNew.open(image)
 }
 
 // слушатели
