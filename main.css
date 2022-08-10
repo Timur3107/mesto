@@ -1,0 +1,1032 @@
+/*!****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/vendor/normalize.css ***!
+  \****************************************************************************/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/vendor/fonts/fonts.css ***!
+  \******************************************************************************/
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(c8ba52b05a9ef10f4758.woff2) format("woff2"),
+       url(8c206db99195777c6769.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(15ca31c0a2a68f76d2d1.woff2) format("woff2"),
+       url(c6938660eec019fefd68.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(ec64ea577b0349e055ad.woff2?v=.19) format("woff2"),
+       url(93c1301bd9f486c573b3.woff?v=3.19) format("woff");
+}
+
+/*!****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/page/page.css ***!
+  \****************************************************************************/
+.page{
+  min-width: 320px;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  background-color: black;
+}
+
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/content/content.css ***!
+  \**********************************************************************************/
+.content{
+  padding: 0 25px 0 25px;
+}
+
+@media screen and (min-width: 1045px){
+  .content{
+    padding: 0 200px 0 200px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .content{
+    padding: 0 19px 0 19px;
+  }
+}
+
+/*!****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/root/root.css ***!
+  \****************************************************************************/
+.root{
+  background-color: #000000;
+}
+
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/header/header.css ***!
+  \********************************************************************************/
+.header{
+  min-height: 74px;
+  border-bottom: 1px solid #545454;
+  margin: 0 19px 0 19px;
+  padding-top: 45px;
+}
+
+@media screen and (min-width: 1045px){
+  .header{
+    margin: 0 200px 0 200px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .header{
+    min-height: 56px;
+    padding: 28px 27px 0 27px;
+    margin: 0;
+  }
+}
+
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/header/__logo/header__logo.css ***!
+  \*********************************************************************************************/
+.header__logo{
+  width: 142px;
+  height: 33px;
+}
+
+@media screen and (max-width: 768px){
+  .header__logo{
+    width: 103px;
+    height: 24px;
+  }
+}
+
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/profile/profile.css ***!
+  \**********************************************************************************/
+.profile{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+
+@media screen and (max-width: 768px){
+  .profile{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/profile/__avatar/profile__avatar.css ***!
+  \***************************************************************************************************/
+.profile__avatar{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-right: 30px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__avatar{
+    margin: 0 0 26px 0;
+  }
+}
+
+/*!***********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/profile/__info/profile__info.css ***!
+  \***********************************************************************************************/
+.profile__info{
+  display: flex;
+}
+
+@media screen and (max-width: 768px){
+  .profile__info{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+}
+
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/profile/__container/profile__container.css ***!
+  \*********************************************************************************************************/
+.profile__container{
+  display: flex;
+  align-items: baseline;
+}
+
+/*!***********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/profile/__name/profile__name.css ***!
+  \***********************************************************************************************/
+.profile__name{
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.14;
+  color: white;
+  margin: 0 18px 16px 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 350px;
+}
+
+
+@media screen and (max-width: 768px){
+  .profile__name{
+    font-size: 27px;
+    line-height: 1.22;
+    margin: 0 10px 14px 0;
+    max-width: 210px;
+  }
+}
+
+/*!*************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/profile/__about/profile__about.css ***!
+  \*************************************************************************************************/
+.profile__about{
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  color: white;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 350px;
+}
+
+@media screen and (max-width: 768px){
+  .profile__about{
+    font-size: 14px;
+    line-height: 1.2;
+    max-width: 200px;
+  }
+}
+
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/profile/__edit-button/profile__edit-button.css ***!
+  \*************************************************************************************************************/
+.profile__edit-button{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background-image: url(ae7e81b03d9072871e42.png);
+  background-position: center;
+  background-color: black;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+  transition: opacity 0.3s linear;
+}
+
+.profile__edit-button:hover{
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px){
+  .profile__edit-button{
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/profile/__add-button/profile__add-button.css ***!
+  \***********************************************************************************************************/
+.profile__add-button{
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  background-image: url(28f194f62d620d49873a.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 2px;
+  transition: opacity 0.3s linear;
+}
+
+.profile__add-button:hover{
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px){
+  .profile__add-button{
+    width: 100%;
+  }
+}
+
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/elements/elements.css ***!
+  \************************************************************************************/
+.elements{
+  margin: 51px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 282px));
+  column-gap: 17px;
+  row-gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+@media screen and (max-width: 768px ) {
+  .elements{
+    margin-top: 36px;
+  }
+}
+
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/element/element.css ***!
+  \**********************************************************************************/
+.element{
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  width: 282px;
+  height: 361px;
+}
+
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/element/__delete/element__delete.css ***!
+  \***************************************************************************************************/
+.element__delete{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-image: url(faa121cdd8bc9382e8ec.png);
+  width: 18px;
+  height: 19px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+}
+
+
+.element__delete:hover{
+  opacity: 0.6;
+}
+
+/*!*************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/element/__image/element__image.css ***!
+  \*************************************************************************************************/
+.element__image{
+  display: block;
+  width: 100%;
+  height: 282px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+}
+
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/element/__mask-group/element__mask-group.css ***!
+  \***********************************************************************************************************/
+.element__mask-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*!*************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/element/__title/element__title.css ***!
+  \*************************************************************************************************/
+.element__title{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  max-width: 70%;
+  margin: 25px 0 31px 21px;
+}
+
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/element/__likeButton/element__like-button.css ***!
+  \************************************************************************************************************/
+.element__like-button{
+  padding: 0;
+  width: 22px;
+  height: 19px;
+  cursor: pointer;
+  background-image: url(e15fa133d79777014878.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  margin-right: 15px;
+  transition: opacity 0.2s linear;
+}
+
+.element__like-button:hover{
+  opacity: 0.6;
+}
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/element/__likeButton/_active/element__like-button_active.css ***!
+  \***************************************************************************************************************************/
+.element__like-button_active{
+  background-image: url(1f8f4e5e8a4e36b19217.png);
+}
+
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/footer/footer.css ***!
+  \********************************************************************************/
+.footer{
+  padding: 66px 25px 60px 25px;
+}
+
+@media screen and (min-width: 1045px){
+  .footer{
+    padding: 66px 200px 60px 200px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .footer{
+    padding: 48px 19px 36px 19px;
+  }
+}
+
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/footer/__copyright/footer__copyright.css ***!
+  \*******************************************************************************************************/
+.footer__copyright{
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  color: #545454;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__copyright{
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/popup.css ***!
+  \******************************************************************************/
+.popup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/_opened/popup_opened.css ***!
+  \*********************************************************************************************/
+.popup_opened{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__container/popup__container.css ***!
+  \*****************************************************************************************************/
+.popup__container{
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  height: 330px;
+  position: relative;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px){
+  .popup__container{
+    margin: 0 19px;
+    height: auto;
+  }
+}
+
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__close-button/popup__close-button.css ***!
+  \***********************************************************************************************************/
+.popup__close-button{
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background-image: url(626e44afedfc0d5ee9d0.png);
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  transition: opacity 0.3s linear;
+}
+
+.popup__close-button:hover{
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px){
+  .popup__close-button{
+    width: 20px;
+    height: 20px;
+    top: -38px;
+    right: 0;
+  }
+}
+
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__title/popup__title.css ***!
+  \*********************************************************************************************/
+.popup__title{
+  margin: 34px 36px 0 36px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 768px){
+  .popup__title{
+    font-size: 18px;
+    line-height: 1.22;
+    margin: 25px 22px 0 22px;
+  }
+}
+
+/*!*******************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__form/popup__form.css ***!
+  \*******************************************************************************************/
+.popup__form{
+  display: flex;
+  flex-direction: column;
+  margin: 54px 36px 0 36px;
+}
+
+@media screen and (max-width: 768px){
+  .popup__form{
+    margin: 75px 22px 0 22px;
+  }
+}
+
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__input/popup__input.css ***!
+  \*********************************************************************************************/
+.popup__input{
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0 0 13px 0;
+}
+
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__input-error/popup__input-error.css ***!
+  \*********************************************************************************************************/
+.popup__input-error{
+  position: absolute;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #FF0000;
+  padding: 5px 0 0 0;
+  top: 143px;
+}
+
+.popup__input-error:last-of-type{
+  top: 205px;
+  padding: 5px 0 0 0;
+}
+
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__input/_error/popup__input_error.css ***!
+  \**********************************************************************************************************/
+.popup__input_error{
+  border-bottom: 1px solid red;
+}
+
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__input-name/popup__input-name.css ***!
+  \*******************************************************************************************************/
+.popup__input-name{
+  margin-bottom: 30px;
+}
+
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__save-button/popup__save-button.css ***!
+  \*********************************************************************************************************/
+.popup__save-button{
+  padding: 0;
+  margin: 48px 0 37px 0;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: black;
+  border: none;
+  height: 50px;
+  transition: opacity 0.3s linear;
+  user-select: none;
+}
+
+.popup__save-button:hover{
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px){
+  .popup__save-button{
+    font-size: 14px;
+    line-height: 1.2;
+    height: 46px;
+    margin: 25px 0 25px 0;
+  }
+}
+
+/*!****************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__save-button/_inactive/popup__save-button_inactive.css ***!
+  \****************************************************************************************************************************/
+.popup__save-button_inactive{
+  color: rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__image/popup__image.css ***!
+  \*********************************************************************************************/
+.popup__image{
+  display: block;
+  max-width: 75vw;
+  max-height: 75vh;
+  color: white;
+}
+
+/*!*********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__container-picture/popup__container-picture.css ***!
+  \*********************************************************************************************************************/
+.popup__container-picture{
+  position: relative;
+}
+
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/__title-picture/popup__title-picture.css ***!
+  \*************************************************************************************************************/
+.popup__title-picture{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: white;
+  margin: 10px 0 0 0;
+}
+
+/*!***********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/blocks/popup/_picture/popup_picture.css ***!
+  \***********************************************************************************************/
+.popup_picture{
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/pages/index.css ***!
+  \*****************************************************************************************************************/
+
