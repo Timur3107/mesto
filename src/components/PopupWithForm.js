@@ -7,6 +7,7 @@ export default class PopupWithForm extends Popup {
     this._inputs = this._popup.querySelectorAll(".popup__input")
     this._form = this._popup.querySelector(".popup__form")
     this._buttonSave = this._popup.querySelector(".popup__save-button")
+    this._saveButtonText = this._buttonSave.textContent
   }
 
   _getInputValues() {
@@ -25,16 +26,22 @@ export default class PopupWithForm extends Popup {
     })
   }
 
+  setInputValues(data) {
+    this._inputs.forEach((input) => {
+      input.value = data[input.name]
+    })
+  }
+
   close(){
     super.close()
     this._form.reset()
   }
 
-  renderLoading(isLoading, textSaveButton){
+  renderLoading(isLoading, loadingText="Сохранение..."){
     if(isLoading){
-      this._buttonSave.textContent = "Сохранение..."
+      this._buttonSave.textContent = loadingText
     }else{
-      this._buttonSave.textContent = textSaveButton
+      this._buttonSave.textContent = this._saveButtonText
     }
   }
 }

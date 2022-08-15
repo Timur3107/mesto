@@ -11,8 +11,6 @@ import {
   formElementProfile,
   settings,
   formElementCard,
-  nameInput,
-  jobInput,
   buttonProfileEdit,
   buttonAddCard,
   cardTemplate,
@@ -47,9 +45,9 @@ Promise.all([api.getInitialCards(), api.getUserInfo()])
 
 // userInfo
 const userInfo = new UserInfo({
-  profileNameSelector: ".profile__name",
-  profileAboutSelector: ".profile__about",
-  profileAvatarSelector: ".profile__avatar"
+  profileName: ".profile__name",
+  profileAbout: ".profile__about",
+  profileAvatar: ".profile__avatar"
 })
 
 
@@ -57,7 +55,7 @@ const userInfo = new UserInfo({
 // popup editProfile
 const popupEditProfileNew = new PopupWithForm(".popup_edit-profile", {
   callbackSubmitForm: ({ name, about }) => {
-    popupEditProfileNew.renderLoading(true, "Сохранить")
+    popupEditProfileNew.renderLoading(true)
     api.setUserInfo(name, about)
       .then((data) => {
         userInfo.setUserInfo(data)
@@ -67,7 +65,7 @@ const popupEditProfileNew = new PopupWithForm(".popup_edit-profile", {
         console.log(error)
       })
       .finally(() => {
-        popupEditProfileNew.renderLoading(false, "Сохранить")
+        popupEditProfileNew.renderLoading(false)
       })
   }
 })
@@ -76,7 +74,7 @@ popupEditProfileNew.setEventListeners()
 // popup addNewCard
 const popupAddCardNew = new PopupWithForm(".popup_add-card", {
   callbackSubmitForm: (data) => {
-    popupAddCardNew.renderLoading(true, "Создать")
+    popupAddCardNew.renderLoading(true)
     api.addCard(data)
       .then((data) => {
         initialCardsSection.addItem(createCard(data))
@@ -86,7 +84,7 @@ const popupAddCardNew = new PopupWithForm(".popup_add-card", {
         console.log(error)
       })
       .finally(() => {
-        popupAddCardNew.renderLoading(false, "Создать")
+        popupAddCardNew.renderLoading(false)
       })
   }
 })
@@ -95,7 +93,7 @@ popupAddCardNew.setEventListeners()
 // popup editAvatar
 const popupEditAvatarNew = new PopupWithForm(".popup_edit-avatar", {
   callbackSubmitForm: (data) => {
-    popupEditAvatarNew.renderLoading(true, "Сохранить")
+    popupEditAvatarNew.renderLoading(true)
     api.setAvatar(data.avatar)
       .then((res) => {
         userInfo.setUserInfo(res)
@@ -105,7 +103,7 @@ const popupEditAvatarNew = new PopupWithForm(".popup_edit-avatar", {
         console.log(error)
       })
       .finally(() => {
-        popupEditAvatarNew.renderLoading(false, "Сохранить")
+        popupEditAvatarNew.renderLoading(false)
       })
   }
 })
@@ -138,22 +136,21 @@ popupViewPictureNew.setEventListeners()
 // ----------------------------open Popups---------------------------------------
 // открытие попапа editAvatar
 buttonAvatarEdit.addEventListener("click", () => {
-  formValidateAvatar.resetValidation()
+  formValidators['popup__form-avatar'].resetValidation()
   popupEditAvatarNew.open()
 })
 
 // открытие попапа profileEdit
 buttonProfileEdit.addEventListener("click", () => {
   const dataUser = userInfo.getUserInfo()
-  nameInput.value = dataUser.name
-  jobInput.value = dataUser.about
-  formValidateProfile.resetValidation()
+  popupEditProfileNew.setInputValues(dataUser)
+  formValidators['popup__form-profile'].resetValidation()
   popupEditProfileNew.open()
 })
 
 // открытие попапа addCard
 buttonAddCard.addEventListener("click", () => {
-  formValidateCard.resetValidation()
+  formValidators['popup__form-card'].resetValidation()
   popupAddCardNew.open()
 })
 
@@ -168,16 +165,17 @@ function handleDeleteCardClick(card, id) {
 }
 
 // ----------------------- валидация форм ----------------------
-// form editProfile
-const formValidateProfile = new FormValidator(settings, formElementProfile)
-formValidateProfile.enableValidation()
-// form addCard
-const formValidateCard = new FormValidator(settings, formElementCard)
-formValidateCard.enableValidation()
-// form deleteCard
-const formValidateAvatar = new FormValidator(settings, formElementAvatar)
-formValidateAvatar.enableValidation()
-
+const formValidators = {}
+const enableValidation = (settings) => {
+  const formList = Array.from(document.querySelectorAll(settings.formSelector))
+  formList.forEach((formElement) => {
+    const validator = new FormValidator(settings, formElement)
+    const formName = formElement.getAttribute('name')
+    formValidators[formName] = validator;
+    validator.enableValidation();
+  });
+};
+enableValidation(settings);
 
 // -------------------------------function--------------------------------
 // функция создания карточки
