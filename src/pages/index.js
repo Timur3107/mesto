@@ -174,7 +174,7 @@ const enableValidation = (settings) => {
     formValidators[formName] = validator;
     validator.enableValidation();
   });
-}
+};
 enableValidation(settings);
 
 // -------------------------------function--------------------------------
