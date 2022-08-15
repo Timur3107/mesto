@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,13 +18,14 @@
 
       <section class="profile">
         <div class="profile__info">
-          <img class="profile__avatar" src="ec4bf153f548f5c11cdf.jpg" alt="Тимур Гиниятов">
+          <button class="profile__edit-avatar-button"></button>
+          <img class="profile__avatar" src="#" alt="Аватар">
           <div>
             <div class="profile__container">
-              <h1 class="profile__name">Тимур Гиниятов</h1>
+              <h1 class="profile__name"></h1>
               <button class="profile__edit-button"></button>
             </div>
-            <p class="profile__about">Горнолыжный спорт</p>
+            <p class="profile__about"></p>
           </div>
         </div>
         <button class="profile__add-button"></button>
@@ -36,7 +38,30 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Timur Giniyatov</p>
     </footer>
-
+    <!-- попап - редактировать аватар -->
+    <div class="popup popup_edit-avatar">
+      <div class="popup__container">
+        <button class="popup__close-button"></button>
+        <h2 class="popup__title">Обновить аватар</h2>
+        <form class="popup__form" novalidate>
+          <input type="url" class="popup__input popup__input-avatar" placeholder="Ссылка на аватар" required
+            id="avatar-input" name="avatar">
+          <span class="popup__input-error avatar-input-error"></span>
+          <button class="popup__save-button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <!-- попап - удалить карточку -->
+    <div class="popup popup_delete-card">
+      <div class="popup__container">
+        <button class="popup__close-button"></button>
+        <h2 class="popup__title">Вы уверены?</h2>
+        <form class="popup__form popup__form_delete-card" novalidate>
+          <button class="popup__save-button" type="submit">Да</button>
+        </form>
+      </div>
+    </div>
+    <!-- попап - редактировать профиль -->
     <div class="popup popup_edit-profile">
       <div class="popup__container">
         <button class="popup__close-button"></button>
@@ -45,14 +70,14 @@
           <input type="text" class="popup__input popup__input-name" required id="name-input" minlength="2"
             maxlength="40" name="name">
           <span class="popup__input-error name-input-error"></span>
-          <input type="text" class="popup__input popup__input-job" required id="job-input" minlength="2"
-            maxlength="200" name="about">
+          <input type="text" class="popup__input popup__input-job" required id="job-input" minlength="2" maxlength="200"
+            name="about">
           <span class="popup__input-error job-input-error"></span>
           <button class="popup__save-button" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
-
+    <!-- попап - добавить карточку -->
     <div class="popup popup_add-card">
       <div class="popup__container">
         <button class="popup__close-button"></button>
@@ -68,7 +93,7 @@
         </form>
       </div>
     </div>
-
+    <!-- попап - посмотреть карточку -->
     <div class="popup popup_picture">
       <div class="popup__container-picture">
         <button type="button" class="popup__close-button"></button>
@@ -76,16 +101,21 @@
         <h2 class="popup__title-picture"></h2>
       </div>
     </div>
+
     <template id="template-element">
       <li class="element">
         <button class="element__delete" type="button"></button>
         <img src="#" alt="#" class="element__image">
         <div class="element__mask-group">
           <h2 class="element__title"></h2>
-          <button class="element__like-button"></button>
+          <div class="element__container-likes">
+            <button class="element__like-button"></button>
+            <p class="element__counter-likes"></p>
+          </div>
         </div>
       </li>
     </template>
   </div>
 </body>
+
 </html>
