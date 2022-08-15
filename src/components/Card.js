@@ -19,13 +19,10 @@ export class Card {
 
   createCard() {
     this._card = this._templateElement.querySelector('.element').cloneNode(true)
-    this._newCardTitle = this._card.querySelector(".element__title")
-    this._newCardImage = this._card.querySelector(".element__image")
-    this._newCardTitle.textContent = this._name
-    this._newCardImage.alt = this._name
-    this._newCardImage.src = this._link
     this._buttonLike = this._card.querySelector(".element__like-button")
     this._buttonDelete = this._card.querySelector(".element__delete")
+    this._titleCard = this._card.querySelector(".element__title")
+    this._titleCard.textContent = this._name
     this._imageCard = this._card.querySelector(".element__image")
     this._imageCard.alt = this._name
     this._imageCard.src = this._link

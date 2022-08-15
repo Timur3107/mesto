@@ -45,10 +45,6 @@ export const formElementProfile = popupEditProfile.querySelector(".popup__form")
 export const formElementCard = popupAddCard.querySelector(".popup__form");
 export const formElementAvatar = popupEditAvatar.querySelector(".popup__form")
 
-// поля ввода в profile
-export const nameInput = formElementProfile.querySelector(".popup__input-name");
-export const jobInput = formElementProfile.querySelector(".popup__input-job");
-
 // профиль
 export const profile = document.querySelector(".profile");
 
